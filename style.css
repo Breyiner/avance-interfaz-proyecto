@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lalezar", sans-serif;
+}
+
+body {
+  background-color: #26C7AC;
+}
+
+/* Diseño de pagina principal*/
+.main-page {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
+  grid-template-areas: "logo formulario";
+}
+
+/*Diseños del logo*/
+.logo-container {
+  grid-area: logo;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
+.logo-container__logo {
+  width: 35vw;
+  height: auto;
+}
+
+.logo-container__tittle {
+  text-transform: uppercase;
+  font-size: 4.3rem;
+  color: white;
+}
+
+/*Diseños del fomrulario de inicio*/
+.main-page__inicio {
+  grid-area: formulario;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-inicio {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0,0,0, 0.5);
+  width: 30vw;
+  background-color: #ffff;
+  padding: 60px;
+  padding-top: 40px;
+  height: max-content;
+  border-radius: 30px;
+  gap: 60px;
+}
+
+.form-inicio__tittle {
+  color: #26C7AC;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+}
+
+.form-inicio__container-campo {
+  position: relative;
+}
+
+.form-inicio__campo {
+  background-color: #26C7AC;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 12px;
+  padding-top: 20px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  color: #ffff;
+  padding-left: 60px;
+}
+
+.form-inicio__campo::placeholder {
+  color: #ffff;
+  opacity: 0.8;
+  font-size: 25px;
+}
+
+.form-inicio__icono-campo {
+  position: absolute;
+  top: 20%;
+  left: 15px;
+  color: white;
+  font-size: 2vw;
+}
+
+.form-inicio__button {
+  border: none;
+  background-color: #26C7AC;
+  width: 300px;
+  padding-top: 5px;
+  margin-top: 10px;
+  /* padding: 20px; */
+  border-radius: 20px;
+  font-size: 2.1rem;
+  color: #ffff;
+  text-transform: uppercase;
+  text-align: center;
+  align-self: center;
+}
+
+.form-inicio__button:hover {
+  transition: ease-in-out 0.3s;
+  background-color: #21a58f;
+  cursor: pointer;
+}
+
+.form-inicio__button--register {
+  width: 250px;
+}
+
+.form-inicio__redirect {
+   display: flex;
+   gap: 10px;
+   font-size: 1.3rem;
+   justify-content: center;
+   color: #26C7AC;
+}
+
+.form-inicio__redirect-link {
+  color: #21a58f;
+}
+
+.form-inicio--register {
+  gap: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.form-inicio__tittle--register {
+  margin-bottom: -20px;
+}
