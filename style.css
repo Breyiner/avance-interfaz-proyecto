@@ -9,6 +9,7 @@
 
 body {
   background-color: #26C7AC;
+  /* margin: 30px; */
 }
 
 /* Diseño de pagina principal*/
@@ -91,12 +92,44 @@ body {
   font-size: 25px;
 }
 
+.form-inicio__container-campo--generos {
+  display: flex;
+  justify-content: space-between;
+  color: #26C7AC;
+}
+
+.form-inicio__radio-genero {
+  margin-right: 10px;
+  border-color: #26C7AC;
+}
+
+
+
+
+.form-inicio__nombre-genero {
+  /* margin-left: 10px; */
+  font-size: 25px;
+}
+
 .form-inicio__icono-campo {
   position: absolute;
   top: 20%;
   left: 15px;
   color: white;
   font-size: 2vw;
+}
+
+.selector-ciudades {
+  /* padding-right: 20px; */
+  appearance: none;
+  /* font-size: 22px; */
+  /* opacity: 0.8; */
+}
+
+.selector-ciudades__ciudad {
+  background-color: #21a58f;
+  /* opacity: 0.8; */
+  /* padding: 0; */
 }
 
 .form-inicio__button {
@@ -137,8 +170,8 @@ body {
 }
 
 .form-inicio--register {
-  gap: 40px;
-  padding-top: 20px;
+  gap: 35px;
+  padding-top: 10px;
   padding-bottom: 20px;
 }
 

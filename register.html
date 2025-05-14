@@ -29,9 +29,22 @@
             <i class="ri-user-fill form-inicio__icono-campo"></i>
           </div>
 
+          <div class="form-inicio__container-campo form-inicio__container-campo--generos">
+            <label for="genero_hombre" class="form-inicio__nombre-genero"><input type="radio" name="genero" id="genero_hombre" class="form-inicio__radio-genero">Hombre</label>
+            <label for="genero_mujer" class="form-inicio__nombre-genero"><input type="radio" name="genero" id="genero_mujer" class="form-inicio__radio-genero">Mujer</label>
+            <label for="genero_otro" class="form-inicio__nombre-genero"><input type="radio" name="genero" id="genero_otro" class="form-inicio__radio-genero">Otro</label>
+          </div>
+
           <div class="form-inicio__container-campo">
-            <input type="text" name="apellido" class="form-inicio__campo" placeholder="Nacionalidad">
-            <i class="ri-user-fill form-inicio__icono-campo"></i>
+            <!-- <input type="text" name="apellido" class="form-inicio__campo" placeholder="Nacionalidad"> -->
+            <i class="ri-map-pin-fill form-inicio__icono-campo"></i>
+            <select name="" class="form-inicio__campo selector-ciudades">
+              <option class="selector-ciudades__ciudad">Ciudad</option>
+              <option value="1" class="selector-ciudades__ciudad">Bucaramanga</option>
+              <option value="2" class="selector-ciudades__ciudad">Lebrija</option>
+              <option value="3" class="selector-ciudades__ciudad">Girón</option>
+              <option value="4" class="selector-ciudades__ciudad">Floridablanca</option>
+            </select>
           </div>
 
           <div class="form-inicio__container-campo">
@@ -47,7 +60,7 @@
           <button type="button" class="form-inicio__button form-inicio__button--register">Registrarse</button>
           <span class="form-inicio__redirect">
             <p class="form-inicio__redirect-text">¿Ya tienes cuenta?</p>
-            <a href="./index.html" class="form-inicio__redirect-link" target="_blank">Iniciar Sesión</a>
+            <a href="./index.html" class="form-inicio__redirect-link">Iniciar Sesión</a>
           </span>
         </form>
       </div>
