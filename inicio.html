@@ -8,17 +8,37 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 <body class="inicio">
   <header class="header">
     <div class="container-tittle">
       <span class="container-tittle__tittle">Inicio</span>
     </div>
-    <div class="profile-container">
-      <span class="profile-container__nombre">Nombre Usuario</span>
-      <div class="profile-container__img-profile">
+    <div class="profile">
+      <span class="profile__nombre">Breyner Acosta</span>
+      <label for="check-menu" class="profile__img-profile">
         <img src="img/perfil.png" alt="logo" class="imagen">
+      </label>
+      <input type="checkbox" class="check-menu" id="check-menu">
+      <div class="menu-perfil">
+        <div class="info-perfil">
+          <img src="img/perfil.png" alt="foto perfil" class="profile__img-profile profile__img-profile--info">
+          <div class="info-perfil__information">
+            <h3 class="info-perfil__name">Breyner Acosta</h3>
+            <a href="#" class="info-perfil__link-profile">See your profile</a>
+          </div>
+        </div>
+        <hr class="menu-perfil__separador">
+        <a href="index.html" class="more-functions">
+          <span class="more-functions__container-icon">
+            <i class="ri-logout-box-r-line more-functions__icon"></i>
+          </span>
+          <p class="more-functions__text">Cerrar Sesión</p>
+          <span class="more-functions__sign">></span>
+        </a>
       </div>
+
     </div>
   </header>
 
@@ -49,22 +69,136 @@
 
 
   <main class="content">
+
     <div class="container-informacion">
+
       <div class="informacion">
+
         <div class="informacion-fecha">
+
           <div class="informacion-fecha__calendario">
             <i class='fa-regular fa-calendar informacion-fecha__icono'></i>
             <div class="informacion-fecha__fecha">
               <span class="informacion-fecha__dia">04</span>
               <span class="informacion-fecha__mes-anio">06/2025</span>
             </div>
+
           </div>
         </div>
-        <div class="informacion-balance">
 
+        <div class="informacion-balance">
+          <div class="informacion-balance__balance">
+            <h2 class="informacion-balance__titulo informacion-balance__titulo--balance">Balance</h2>
+            <span class="informacion-balance__monto informacion-balance__monto--balance">$ 1.000.000</span>
+          </div>
+
+          <div class="informacion-balance__movimientos">
+            <div class="informacion-balance__ingresos">
+              <h3 class="informacion-balance__titulo">Ingresos</h3>
+              <span class="informacion-balance__monto">+ $ 1.500.000</span>
+            </div>
+            <div class="informacion-balance__gastos">
+              <h3 class="informacion-balance__titulo">Gastos</h3>
+              <span class="informacion-balance__monto">- $ 300.000</span>
+            </div>
+            <div class="informacion-balance__metas">
+              <h3 class="informacion-balance__titulo">Metas</h3>
+              <span class="informacion-balance__monto">- $ 200.000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="informacion-mensaje">
+          <span class="informacion-mensaje__mensaje">Tu balance es positivo. ¡Bien hecho!</span>
         </div>
       </div>
     </div>
+
+    <hr class="separador">
+
+    <div class="container-movimientos">
+
+      <dialog id="modal">
+        <h1>Hola</h1>
+        <p>Hola</p>
+        <button id="cerrarModal">Cerrar</button>
+      </dialog>
+      <button id="abrirModal">Abrir</button>
+      <div class="movimiento">
+        <div class="movimiento__informacion">
+          <div class="movimiento__categoria">
+            <i class="ri-restaurant-line movimiento__icono"></i>
+          </div>
+          <div class="movimiento__contenido">
+            <span class="movimiento__tittle">Comida</span>
+            <span class="movimiento__descripcion">Compré comida para la casa</span>
+          </div>
+        </div>
+        <span class="movimiento__monto">$ 250.000</span>
+      </div>
+      <div class="movimiento">
+        <div class="movimiento__informacion">
+          <div class="movimiento__categoria">
+            <i class="ri-restaurant-line movimiento__icono"></i>
+          </div>
+          <div class="movimiento__contenido">
+            <span class="movimiento__tittle">Comida</span>
+            <span class="movimiento__descripcion">Compré comida para la casa</span>
+          </div>
+        </div>
+        <span class="movimiento__monto">$ 250.000</span>
+      </div>
+      <div class="movimiento">
+        <div class="movimiento__informacion">
+          <div class="movimiento__categoria">
+            <i class="ri-restaurant-line movimiento__icono"></i>
+          </div>
+          <div class="movimiento__contenido">
+            <span class="movimiento__tittle">Comida</span>
+            <span class="movimiento__descripcion">Compré comida para la casa</span>
+          </div>
+        </div>
+        <span class="movimiento__monto">$ 250.000</span>
+      </div>
+      <div class="movimiento">
+        <div class="movimiento__informacion">
+          <div class="movimiento__categoria">
+            <i class="ri-restaurant-line movimiento__icono"></i>
+          </div>
+          <div class="movimiento__contenido">
+            <span class="movimiento__tittle">Comida</span>
+            <span class="movimiento__descripcion">Compré comida para la casa</span>
+          </div>
+        </div>
+        <span class="movimiento__monto">$ 250.000</span>
+      </div>
+      <div class="movimiento">
+        <div class="movimiento__informacion">
+          <div class="movimiento__categoria">
+            <i class="ri-restaurant-line movimiento__icono"></i>
+          </div>
+          <div class="movimiento__contenido">
+            <span class="movimiento__tittle">Comida</span>
+            <span class="movimiento__descripcion">Compré comida para la casa</span>
+          </div>
+        </div>
+        <span class="movimiento__monto">$ 250.000</span>
+      </div>
+      <div class="movimiento">
+        <div class="movimiento__informacion">
+          <div class="movimiento__categoria">
+            <i class="ri-restaurant-line movimiento__icono"></i>
+          </div>
+          <div class="movimiento__contenido">
+            <span class="movimiento__tittle">Comida</span>
+            <span class="movimiento__descripcion">Compré comida para la casa</span>
+          </div>
+        </div>
+        <span class="movimiento__monto">$ 250.000</span>
+      </div>
+    </div>
+
   </main>
+  <script type="module" src="app.js"></script>
 </body>
 </html>
