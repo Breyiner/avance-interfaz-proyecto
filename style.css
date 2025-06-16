@@ -634,3 +634,15 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 5px 10px #0000004d
 }
+
+
+.modal {
+  margin-top: 50px;
+  justify-self: center;
+  width: 500px;
+  height: 500px;
+}
+
+.modal::backdrop {
+  background-color: #8282828c;
+}
