@@ -16,29 +16,38 @@
         <p class="logo-container__tittle">whealthy wellness</p>
       </div>
       <div class="main-page__inicio">
-        <form class="form-inicio form-inicio--register"> 
+        <form autocomplete="off" action="#" novalidate class="form-inicio form-inicio--register"> 
           <h4 class="form-inicio__tittle form-inicio__tittle--register">Registro</h4>
           
           <div class="form-inicio__container-campo">
-            <input type="text" name="nombre" class="form-inicio__campo" placeholder="Nombre">
+            <input required type="text" name="nombre" class="form-inicio__campo" placeholder="Nombre">
             <i class="ri-user-fill form-inicio__icono-campo"></i>
           </div>
           
           <div class="form-inicio__container-campo">
-            <input type="text" name="apellido" class="form-inicio__campo" placeholder="Apellido">
+            <input required type="text" name="apellido" class="form-inicio__campo" placeholder="Apellido">
             <i class="ri-user-fill form-inicio__icono-campo"></i>
           </div>
           
           <div class="form-inicio__container-campo form-inicio__container-campo--generos">
-            <label for="genero_hombre" class="form-inicio__nombre-genero"><input type="radio" name="genero" id="genero_hombre" class="form-inicio__radio-genero">Hombre</label>
-            <label for="genero_mujer" class="form-inicio__nombre-genero"><input type="radio" name="genero" id="genero_mujer" class="form-inicio__radio-genero">Mujer</label>
-            <label for="genero_otro" class="form-inicio__nombre-genero"><input type="radio" name="genero" id="genero_otro" class="form-inicio__radio-genero">Otro</label>
+              <label for="genero_hombre" class="form-inicio__nombre-genero">
+                  <input required type="radio" name="genero_id" id="genero_hombre" class="form-inicio__radio-genero" value="1">
+                  Hombre
+              </label>
+              <label for="genero_mujer" class="form-inicio__nombre-genero">
+                  <input required type="radio" name="genero_id" id="genero_mujer" class="form-inicio__radio-genero" value="2">
+                  Mujer
+              </label>
+              <label for="genero_otro" class="form-inicio__nombre-genero">
+                  <input required type="radio" name="genero_id" id="genero_otro" class="form-inicio__radio-genero" value="1">
+                  Otro
+              </label>
           </div>
           
           <div class="form-inicio__container-campo">
-            <!-- <input type="text" name="apellido" class="form-inicio__campo" placeholder="Nacionalidad"> -->
+            <!-- <input required type="text" name="apellido" class="form-inicio__campo" placeholder="Nacionalidad"> -->
             <i class="ri-map-pin-fill form-inicio__icono-campo"></i>
-            <select name="" class="form-inicio__campo selector-ciudades">
+            <select name="ciudad_id" class="form-inicio__campo selector-ciudades" required>
               <option class="selector-ciudades__ciudad">Ciudad</option>
               <option value="1" class="selector-ciudades__ciudad">Bucaramanga</option>
               <option value="2" class="selector-ciudades__ciudad">Lebrija</option>
@@ -48,16 +57,16 @@
           </div>
           
           <div class="form-inicio__container-campo">
-            <input type="email" name="email" class="form-inicio__campo" placeholder="Correo">
+            <input required type="email" name="correo" class="form-inicio__campo" placeholder="Correo">
             <i class="ri-mail-fill form-inicio__icono-campo"></i>
           </div>
           
           <div class="form-inicio__container-campo">
-            <input type="password" name="password" class="form-inicio__campo" placeholder="Contraseña">
+            <input required type="password" name="contrasena" class="form-inicio__campo" placeholder="Contraseña">
             <i class="ri-lock-fill form-inicio__icono-campo"></i>
           </div>
           
-          <button type="button" class="form-inicio__button form-inicio__button--register">Registrarse</button>
+          <button type="submit" class="form-inicio__button form-inicio__button--register" id="registrar">Registrarse</button>
           <span class="form-inicio__redirect">
             <p class="form-inicio__redirect-text">¿Ya tienes cuenta?</p>
             <a href="./index.html" class="form-inicio__redirect-link">Iniciar Sesión</a>
@@ -66,5 +75,6 @@
       </div>
     </section>
   </main>
+  <script type="module" src="./register.js"></script>
 </body>
 </html>
