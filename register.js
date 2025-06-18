@@ -1,3 +1,5 @@
+import { validarTexto } from "./validaciones.js";
+
 const formulario = document.querySelector('form');
 const boton = document.querySelector('#registrar');
 
@@ -57,10 +59,17 @@ const validarCampos = (e) => {
   return valido;
 }
 
+nombre.addEventListener('keydown', validarTexto);
+apellido.addEventListener('keydown', validarTexto);
+
+
 formulario.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    if (!validarCampos(e)) return;
+    if (!validarCampos(e)) {
+        alert("Llena todos los campos") 
+        return;
+    }
 
     dataUsuario['estado_id'] = 1;
 
@@ -78,7 +87,7 @@ formulario.addEventListener('submit', async (e) => {
         if (!respuesta.ok) {
             const textoError = await respuesta.text(); // Obtiene la respuesta como texto
             console.log(textoError); // Muestra el texto de error en la consola
-            alert("Error al intentar crear el usuario"); // Muestra el error al usuario
+            alert("Llena todos los campos"); // Muestra el error al usuario
             return; // Detenemos el flujo si hay errores
         }
 

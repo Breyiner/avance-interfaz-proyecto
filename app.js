@@ -13,34 +13,41 @@
 //   document.querySelector('.modal').close();
 // });
 
-document.querySelector("#login").addEventListener("click", async () => {
+document.querySelector("form").addEventListener("submit", async (e) => {
+  e.preventDefault();
 
   let correo = document.querySelector('#email').value;
   let contrasena = document.querySelector('#contrasena').value;
-  
 
   try {
     let response = await fetch(`http://localhost:8080/pruebaApi/api/usuarios/correo/${correo}`);
+
     if (!response.ok) {
       alert('Ocurrió un error con el servidor');
       return;
     }
 
-    if (response.status === 404) {
-      alert('Usuario no encontrado');
-      return;
+    const responseClone = response.clone();
+    let usuarioTexto = await responseClone.text();
+
+    if (usuarioTexto) {
+
+      let usuario = JSON.parse(usuarioTexto);
+  
+      if (contrasena === usuario.contrasena) {
+        alert(`Bienvenido ${usuario.nombre}`);
+        localStorage.setItem("usuario", JSON.stringify(usuario));
+        window.location.assign('./inicio.html');
+      } else {
+        alert('El correo o la contraseña son incorrectos');
+      }
+      
     }
 
-    let usuario = await response.json();
+    else alert('El usuario no existe');
 
-    if (contrasena === usuario.contrasena) {
-      alert(`Bienvenido ${usuario.nombre}`);
-      localStorage.setItem("usuario", JSON.stringify(usuario));
-      window.location.assign('./inicio.html');
-    } else {
-      alert('El correo o la contraseña son incorrectos');
-    }
   } catch (error) {
+    alert(error.message);
     console.error('Hubo un problema con la solicitud:', error);
   }
 });
