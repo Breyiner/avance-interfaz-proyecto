@@ -84,8 +84,16 @@ formulario.addEventListener('submit', async (e) => {
         // const resultado = await respuesta.json();
 
         // Si la respuesta NO fue exitosa (por ejemplo, error 400 o 500), mostramos los errores
-        if (!respuesta.ok) {
-            const textoError = await respuesta.text(); // Obtiene la respuesta como texto
+      if (!respuesta.ok) {
+
+          const textoError = await respuesta.json(); // Obtiene la respuesta como texto
+          
+          if (textoError.code == 409) {
+            alert(textoError.message);
+            e.target.reset();
+            return;
+          }
+          
             console.log(textoError); // Muestra el texto de error en la consola
             alert("Llena todos los campos"); // Muestra el error al usuario
             return; // Detenemos el flujo si hay errores
@@ -94,7 +102,8 @@ formulario.addEventListener('submit', async (e) => {
         alert("Formulario enviado.");    
         e.target.reset();
     } catch (error) {
-        // alert(`error: ${error.message}`);
+      // alert(`error: ${error.message}`);
+      alert("este correo ya fué registrado");
         console.log(error.message);
     }
     

@@ -32,7 +32,9 @@ document.querySelector("form").addEventListener("submit", async (e) => {
 
     if (usuarioTexto) {
 
-      let usuario = JSON.parse(usuarioTexto);
+      let usuariod = JSON.parse(usuarioTexto);
+
+      let usuario = usuariod.data;
   
       if (contrasena === usuario.contrasena) {
         alert(`Bienvenido ${usuario.nombre}`);
