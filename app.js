@@ -20,36 +20,28 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   let contrasena = document.querySelector('#contrasena').value;
 
   try {
-    let response = await fetch(`http://localhost:8080/pruebaApi/api/usuarios/correo/${correo}`);
+    let respuesta = await fetch(`http://localhost:8080/pruebaApi/api/usuarios/correo/${correo}`);
 
-    if (!response.ok) {
-      alert('Ocurrió un error con el servidor');
+    let datos = await respuesta.json();
+
+    if (datos.code == 404) {
+      alert(datos.message);
       return;
     }
 
-    const responseClone = response.clone();
-    let usuarioTexto = await responseClone.text();
-
-    if (usuarioTexto) {
-
-      let usuariod = JSON.parse(usuarioTexto);
-
-      let usuario = usuariod.data;
-  
-      if (contrasena === usuario.contrasena) {
-        alert(`Bienvenido ${usuario.nombre}`);
-        localStorage.setItem("usuario", JSON.stringify(usuario));
-        window.location.assign('./inicio.html');
-      } else {
-        alert('El correo o la contraseña son incorrectos');
-      }
-      
+    else {
+      let usuario = datos.data;
+        if (contrasena === usuario.contrasena) {
+          alert(`Bienvenido ${usuario.nombre}`);
+          localStorage.setItem("usuario", JSON.stringify(usuario));
+          window.location.assign('./inicio.html');
+        } else {
+          alert('El correo o la contraseña son incorrectos');
+        }
     }
 
-    else alert('El usuario no existe');
-
   } catch (error) {
-    alert(error.message);
+    alert("Ups, se presentó un error");
     console.error('Hubo un problema con la solicitud:', error);
   }
 });
