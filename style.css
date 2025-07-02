@@ -538,7 +538,7 @@ body {
 }
 
 .informacion-balance__monto--balance {
-  font-size: 9rem;
+  font-size: 6rem;
 }
 
 .informacion-balance__ingresos {
@@ -637,12 +637,154 @@ body {
 
 
 .modal {
-  margin-top: 50px;
-  justify-self: center;
+  display: none; /* Oculto por defecto */
   width: 500px;
-  height: 500px;
+  height: max-content;
+  background-color: #fff;
+  justify-content: center; 
+  align-items: center;
+  z-index: 999;
+  margin: 50px auto;
+  border-radius: 30px;
+  border: none;
+  overflow: hidden;
+}
+
+.modal.mostrar {
+  display: flex; /* Visible cuando tiene la clase 'mostrar' */
+}
+
+.modal__contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.modal__container-title {
+  height: 70px;
+  width: 100%;
+  background-color: #21a58f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.modal__titulo {
+  color: #fff;
+  letter-spacing: 4px;
+}
+
+.modal__salir {
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  top: 25%;
+  right: 3%;
+  cursor: pointer;
+}
+
+.modal__salir-icono {
+  font-size: 2rem;
+  color: #fff;
 }
 
 .modal::backdrop {
   background-color: #8282828c;
+}
+
+.modal__detalles {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+}
+
+.modal__detalles__title {
+  font-size: 1.3rem;
+}
+
+/* Formulario modal */
+
+.info-movimiento {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  gap: 25px;
+}
+
+.info-movimiento__container-campos {
+  width: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 50px;
+}
+
+.info-movimiento__control {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.info-movimiento__nombre-campo {
+  font-size: 1.1rem;
+}
+
+.info-movimiento__campo {
+  width: 200px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #8282828c;
+
+}
+
+.info-movimiento__campo--texto {
+  padding-left: 10px;
+}
+
+.info-movimiento__info-campo {
+  width: 100%;
+  align-self: flex-end;
+}
+
+.info-movimiento__campo--fecha {
+  padding: 0 5px;
+}
+
+.info-movimiento__campo--textarea {
+  width: 100%;
+  padding-left: 10px;
+  resize: none;
+}
+
+.info-movimiento__botones {
+  display: flex;
+  gap: 20px;
+}
+
+.boton {
+  border: none;
+  height: 30px;
+  min-width: 80px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  padding-top: 3px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.boton--eliminar {
+  background-color: rgb(255, 69, 69);
+}
+
+.boton--editar {
+  background-color: #007bff;
 }
