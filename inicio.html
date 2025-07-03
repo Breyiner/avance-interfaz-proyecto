@@ -70,6 +70,8 @@
 
   <main class="content">
 
+    
+
     <div class="container-informacion">
 
       <div class="informacion">
@@ -113,8 +115,20 @@
         </div>
       </div>
     </div>
-
-    <hr class="separador">
+    
+    <div class="switch-filtro">
+      
+      <label class="switch-filtro__name switch-filtro__name--ingresos" for="radio-switch-ingresos">Ingresos</label>
+      <input type="radio" name="radio-switch" id="radio-switch-ingresos" class="switch-filtro__radio switch-filtro__radio--ingresos">
+      
+      <label class="switch-filtro__name switch-filtro__name--gastos" for="radio-switch-gastos">Gastos</label>
+      <input type="radio" name="radio-switch" id="radio-switch-gastos" class="switch-filtro__radio switch-filtro__radio--gastos">
+      
+      <label class="switch-filtro__name switch-filtro__name--metas" for="radio-switch-metas">Metas</label>
+      <input type="radio" name="radio-switch" id="radio-switch-metas" class="switch-filtro__radio switch-filtro__radio--metas">
+      
+      <span class="switch-filtro__slider"></span>
+    </div>
 
     <div class="container-movimientos">
 
@@ -132,7 +146,7 @@
               <div class="info-movimiento__container-campos">
                 <div class="info-movimiento__control">
                   <label class="info-movimiento__nombre-campo">Tipo de movimiento:</label>
-                  <select class="info-movimiento__campo info-movimiento__campo--select">
+                  <select disabled class="info-movimiento__campo info-movimiento__campo--select">
                     <option>Seleccione...</option>
                     <option>Ingreso</option>
                     <option>Gasto</option>
@@ -141,7 +155,7 @@
                 </div>
                 <div class="info-movimiento__control">
                   <label class="info-movimiento__nombre-campo">Categoría:</label>
-                  <select class="info-movimiento__campo info-movimiento__campo--select">
+                  <select disabled class="info-movimiento__campo info-movimiento__campo--select">
                     <option>Seleccione...</option>
                     <option>Comida</option>
                     <option>Transporte</option>
@@ -152,7 +166,7 @@
               <div class="info-movimiento__container-campos">
                 <div class="info-movimiento__control">
                   <label class="info-movimiento__nombre-campo">Monto:</label>
-                  <input type="text" class="info-movimiento__campo info-movimiento__campo--texto">
+                  <input type="text" disabled class="info-movimiento__campo info-movimiento__campo--texto">
                 </div>
                 <div class="info-movimiento__control">
                   <label class="info-movimiento__nombre-campo">Fecha:</label>
@@ -162,7 +176,7 @@
               <div class="info-movimiento__container-campos">
                 <div class="info-movimiento__control">
                   <label class="info-movimiento__nombre-campo">Descripción:</label>
-                  <textarea rows="3" class="info-movimiento__campo info-movimiento__campo--textarea"></textarea>
+                  <textarea rows="3" disabled class="info-movimiento__campo info-movimiento__campo--textarea"></textarea>
                 </div>
               </div>
               <div class="info-movimiento__botones">
