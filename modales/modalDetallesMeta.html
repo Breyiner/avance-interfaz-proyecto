@@ -1,0 +1,63 @@
+<div class="modal__contenido">
+  <div class="modal__container-title">
+      <h2 class="modal__titulo">Meta</h2>
+      <div class="modal__salir">
+          <i class="ri-close-fill modal__salir-icono"></i>
+      </div>
+  </div>
+  <div class="modal__detalles">
+      <h3 class="modal__detalles__title">Detalles:</h3>
+      <form class="info-movimiento">
+      <div class="info-movimiento__container-campos">
+          <div class="info-movimiento__control">
+            <label class="info-movimiento__nombre-campo">Nombre:</label>
+            <input type="text" disabled class="info-movimiento__campo info-movimiento__campo--texto">
+          </div>
+          <div class="info-movimiento__control">
+            <label class="info-movimiento__nombre-campo">Estado:</label>
+            <input type="text" disabled class="info-movimiento__campo info-movimiento__campo--texto">
+          </div>
+      </div>
+      <div class="info-movimiento__container-campos">
+          <!-- <div class="info-movimiento__control">
+          <label class="info-movimiento__nombre-campo">Monto:</label>
+          <input type="text" disabled class="info-movimiento__campo info-movimiento__campo--texto">
+          </div> -->
+          <div class="info-movimiento__control">
+          <label class="info-movimiento__nombre-campo">Fecha creación:</label>
+          <input type="date" class="info-movimiento__campo info-movimiento__campo--fecha" disabled>
+          </div>
+          <div class="info-movimiento__control">
+          <label class="info-movimiento__nombre-campo">Fecha fin (opcional):</label>
+          <input type="date" class="info-movimiento__campo info-movimiento__campo--fecha" disabled>
+          </div>
+      </div>
+      <div class="info-movimiento__container-campos">
+        <div class="info-movimiento__control">
+          <label class="info-movimiento__nombre-campo">Total a ahorrar:</label>
+          <input type="text" disabled class="info-movimiento__campo info-movimiento__campo--texto">
+        </div>
+        <div class="info-movimiento__control">
+          <label class="info-movimiento__nombre-campo">Total ahorrado:</label>
+          <input type="text" disabled class="info-movimiento__campo info-movimiento__campo--texto">
+        </div>
+      </div>
+      <div class="info-movimiento__container-campos">
+          <div class="info-movimiento__control">
+          <label class="info-movimiento__nombre-campo">Descripción:</label>
+          <textarea rows="3" disabled class="info-movimiento__campo info-movimiento__campo--textarea"></textarea>
+          </div>
+      </div>
+      <div class="info-movimiento__botones botones">
+          <button class="boton boton--movimientos" type="button">Movimientos 
+            <span class="boton__texto-adicional">10</span>
+          </button>
+          
+          <div class="botones__acciones">
+            <button class="boton boton--editar">Editar</button>
+            <button class="boton boton--eliminar">Eliminar</button>
+          </div>
+      </div>
+      </form>
+  </div>
+</div>
