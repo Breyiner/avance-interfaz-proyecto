@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WHEALTHY WELLNESS</title>
+  <link rel="shortcut icon" href="img/logo-proyecto-color.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="inicio">
+  <header class="header">
+    <div class="container-tittle">
+      <span class="container-tittle__tittle">Metas</span>
+    </div>
+    <div class="profile">
+      <span class="profile__nombre">Usuario</span>
+      <label for="check-menu" class="profile__img-profile">
+        <img src="img/perfil.png" alt="logo" class="imagen">
+      </label>
+      <input type="checkbox" class="check-menu" id="check-menu">
+      <div class="menu-perfil">
+        <div class="info-perfil">
+          <img src="img/perfil.png" alt="foto perfil" class="profile__img-profile profile__img-profile--info">
+          <div class="info-perfil__information">
+            <h3 class="info-perfil__name">Usuario</h3>
+            <a href="#" class="info-perfil__link-profile">See your profile</a>
+          </div>
+        </div>
+        <hr class="menu-perfil__separador">
+        <a href="index.html" class="more-functions">
+          <span class="more-functions__container-icon">
+            <i class="ri-logout-box-r-line more-functions__icon"></i>
+          </span>
+          <p class="more-functions__text">Cerrar Sesión</p>
+          <span class="more-functions__sign">></span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+
+  <aside class="sidebar">
+    <div class="logo-container logo-container--inicio">
+      <img src="./img/logo-proyecto-blanco.png" alt="imagen logo" class="logo-container__logo logo-container__logo--inicio">
+      <p class="logo-container__tittle logo-container__tittle--inicio">whealthy wellness</p>
+    </div>
+
+    <hr class="sidebar__separator">
+
+    <div class="sidebar-items">
+        <a href="inicio.html" class="sidebar-items__item">
+            <i class="ri-home-3-line sidebar-items__icon"></i>
+            <span class="sidebar-items__texto">Inicio</span>
+        </a>
+        <a href="metas.html" class="sidebar-items__item">
+            <i class="ri-bar-chart-box-line sidebar-items__icon"></i>
+            <span class="sidebar-items__texto">Metas</span>
+        </a>
+        <a href="calendario.html" class="sidebar-items__item">
+            <i class="ri-calendar-line sidebar-items__icon"></i>
+            <span class="sidebar-items__texto">Calendario</span>
+        </a>
+        <a href="operaciones.html" class="sidebar-items__item">
+            <i class="ri-exchange-dollar-line sidebar-items__icon"></i>
+            <span class="sidebar-items__texto">Operaciones</span>
+        </a>
+        <a href="historial.html" class="sidebar-items__item">
+            <i class="ri-time-line sidebar-items__icon"></i>
+            <span class="sidebar-items__texto">Historial</span>
+        </a>
+    </div>
+
+  </aside>
+
+  <main class="content">
+
+    <button class="nuevo"> 
+        <i class="ri-add-line nuevo__icono"></i>
+    </button>
+
+
+    <div class="container-metas">
+        <div class="meta">
+            <span class="meta__title">Ahorro moto</span>
+            <div class="meta__informacion">
+                <div class="meta__row">
+                    <p class="meta__text">Monto a ahorrar:</p>
+                    <p class="meta__monto">$ 15.000.000</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text">Fecha estimada:</p>
+                    <p class="meta__meta-estimada">dd/mm/yyyy</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text meta__text--movimientos">Movimientos registrados:</p>
+                    <p class="meta__cont-movimientos">10</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text">Total ahorrado:</p>
+                    <p class="meta__total-ahorrado">$ 7.000.000</p>
+                </div>
+            </div>
+            <div class="meta__grafico">
+                <div class="meta__valores">
+                    <p class="meta__ahorrado">$ 0</p>
+                    <p class="meta__total">$ 15.000.000</p>
+                </div>
+                <progress class="meta__progreso" max="15000000" value="7000000"></progress>
+            </div>
+        </div>
+        <div class="meta">
+            <span class="meta__title">Ahorro moto</span>
+            <div class="meta__informacion">
+                <div class="meta__row">
+                    <p class="meta__text">Monto a ahorrar:</p>
+                    <p class="meta__monto">$ 15.000.000</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text">Fecha estimada:</p>
+                    <p class="meta__meta-estimada">dd/mm/yyyy</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text meta__text--movimientos">Movimientos registrados:</p>
+                    <p class="meta__cont-movimientos">10</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text">Total ahorrado:</p>
+                    <p class="meta__total-ahorrado">$ 7.000.000</p>
+                </div>
+            </div>
+            <div class="meta__grafico">
+                <div class="meta__valores">
+                    <p class="meta__ahorrado">$ 0</p>
+                    <p class="meta__total">$ 15.000.000</p>
+                </div>
+                <progress class="meta__progreso" max="15000000" value="7000000"></progress>
+            </div>
+        </div>
+        <div class="meta">
+            <span class="meta__title">Ahorro moto</span>
+            <div class="meta__informacion">
+                <div class="meta__row">
+                    <p class="meta__text">Monto a ahorrar:</p>
+                    <p class="meta__monto">$ 15.000.000</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text">Fecha estimada:</p>
+                    <p class="meta__meta-estimada">dd/mm/yyyy</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text meta__text--movimientos">Movimientos registrados:</p>
+                    <p class="meta__cont-movimientos">10</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text">Total ahorrado:</p>
+                    <p class="meta__total-ahorrado">$ 7.000.000</p>
+                </div>
+            </div>
+            <div class="meta__grafico">
+                <div class="meta__valores">
+                    <p class="meta__ahorrado">$ 0</p>
+                    <p class="meta__total">$ 15.000.000</p>
+                </div>
+                <progress class="meta__progreso" max="15000000" value="7000000"></progress>
+            </div>
+        </div>
+        <div class="meta">
+            <span class="meta__title">Ahorro moto</span>
+            <div class="meta__informacion">
+                <div class="meta__row">
+                    <p class="meta__text">Monto a ahorrar:</p>
+                    <p class="meta__monto">$ 15.000.000</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text">Fecha estimada:</p>
+                    <p class="meta__meta-estimada">dd/mm/yyyy</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text meta__text--movimientos">Movimientos registrados:</p>
+                    <p class="meta__cont-movimientos">10</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text">Total ahorrado:</p>
+                    <p class="meta__total-ahorrado">$ 7.000.000</p>
+                </div>
+            </div>
+            <div class="meta__grafico">
+                <div class="meta__valores">
+                    <p class="meta__ahorrado">$ 0</p>
+                    <p class="meta__total">$ 15.000.000</p>
+                </div>
+                <progress class="meta__progreso" max="15000000" value="7000000"></progress>
+            </div>
+        </div>
+        <div class="meta">
+            <span class="meta__title">Ahorro moto</span>
+            <div class="meta__informacion">
+                <div class="meta__row">
+                    <p class="meta__text">Monto a ahorrar:</p>
+                    <p class="meta__monto">$ 15.000.000</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text">Fecha estimada:</p>
+                    <p class="meta__meta-estimada">dd/mm/yyyy</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text meta__text--movimientos">Movimientos registrados:</p>
+                    <p class="meta__cont-movimientos">10</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text">Total ahorrado:</p>
+                    <p class="meta__total-ahorrado">$ 7.000.000</p>
+                </div>
+            </div>
+            <div class="meta__grafico">
+                <div class="meta__valores">
+                    <p class="meta__ahorrado">$ 0</p>
+                    <p class="meta__total">$ 15.000.000</p>
+                </div>
+                <progress class="meta__progreso" max="15000000" value="7000000"></progress>
+            </div>
+        </div>
+        <div class="meta">
+            <span class="meta__title">Ahorro moto</span>
+            <div class="meta__informacion">
+                <div class="meta__row">
+                    <p class="meta__text">Monto a ahorrar:</p>
+                    <p class="meta__monto">$ 15.000.000</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text">Fecha estimada:</p>
+                    <p class="meta__meta-estimada">dd/mm/yyyy</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text meta__text--movimientos">Movimientos registrados:</p>
+                    <p class="meta__cont-movimientos">10</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text">Total ahorrado:</p>
+                    <p class="meta__total-ahorrado">$ 7.000.000</p>
+                </div>
+            </div>
+            <div class="meta__grafico">
+                <div class="meta__valores">
+                    <p class="meta__ahorrado">$ 0</p>
+                    <p class="meta__total">$ 15.000.000</p>
+                </div>
+                <progress class="meta__progreso" max="15000000" value="7000000"></progress>
+            </div>
+        </div>
+        <div class="meta">
+            <span class="meta__title">Ahorro moto</span>
+            <div class="meta__informacion">
+                <div class="meta__row">
+                    <p class="meta__text">Monto a ahorrar:</p>
+                    <p class="meta__monto">$ 15.000.000</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text">Fecha estimada:</p>
+                    <p class="meta__meta-estimada">dd/mm/yyyy</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text meta__text--movimientos">Movimientos registrados:</p>
+                    <p class="meta__cont-movimientos">10</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text">Total ahorrado:</p>
+                    <p class="meta__total-ahorrado">$ 7.000.000</p>
+                </div>
+            </div>
+            <div class="meta__grafico">
+                <div class="meta__valores">
+                    <p class="meta__ahorrado">$ 0</p>
+                    <p class="meta__total">$ 15.000.000</p>
+                </div>
+                <progress class="meta__progreso" max="15000000" value="7000000"></progress>
+            </div>
+        </div>
+        <div class="meta">
+            <span class="meta__title">Ahorro moto</span>
+            <div class="meta__informacion">
+                <div class="meta__row">
+                    <p class="meta__text">Monto a ahorrar:</p>
+                    <p class="meta__monto">$ 15.000.000</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text">Fecha estimada:</p>
+                    <p class="meta__meta-estimada">dd/mm/yyyy</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text meta__text--movimientos">Movimientos registrados:</p>
+                    <p class="meta__cont-movimientos">10</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text">Total ahorrado:</p>
+                    <p class="meta__total-ahorrado">$ 7.000.000</p>
+                </div>
+            </div>
+            <div class="meta__grafico">
+                <div class="meta__valores">
+                    <p class="meta__ahorrado">$ 0</p>
+                    <p class="meta__total">$ 15.000.000</p>
+                </div>
+                <progress class="meta__progreso" max="15000000" value="7000000"></progress>
+            </div>
+        </div>
+        <div class="meta">
+            <span class="meta__title">Ahorro moto</span>
+            <div class="meta__informacion">
+                <div class="meta__row">
+                    <p class="meta__text">Monto a ahorrar:</p>
+                    <p class="meta__monto">$ 15.000.000</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text">Fecha estimada:</p>
+                    <p class="meta__meta-estimada">dd/mm/yyyy</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text meta__text--movimientos">Movimientos registrados:</p>
+                    <p class="meta__cont-movimientos">10</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text">Total ahorrado:</p>
+                    <p class="meta__total-ahorrado">$ 7.000.000</p>
+                </div>
+            </div>
+            <div class="meta__grafico">
+                <div class="meta__valores">
+                    <p class="meta__ahorrado">$ 0</p>
+                    <p class="meta__total">$ 15.000.000</p>
+                </div>
+                <progress class="meta__progreso" max="15000000" value="7000000"></progress>
+            </div>
+        </div>
+        <div class="meta">
+            <span class="meta__title">Ahorro moto</span>
+            <div class="meta__informacion">
+                <div class="meta__row">
+                    <p class="meta__text">Monto a ahorrar:</p>
+                    <p class="meta__monto">$ 15.000.000</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text">Fecha estimada:</p>
+                    <p class="meta__meta-estimada">dd/mm/yyyy</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text meta__text--movimientos">Movimientos registrados:</p>
+                    <p class="meta__cont-movimientos">10</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text">Total ahorrado:</p>
+                    <p class="meta__total-ahorrado">$ 7.000.000</p>
+                </div>
+            </div>
+            <div class="meta__grafico">
+                <div class="meta__valores">
+                    <p class="meta__ahorrado">$ 0</p>
+                    <p class="meta__total">$ 15.000.000</p>
+                </div>
+                <progress class="meta__progreso" max="15000000" value="7000000"></progress>
+            </div>
+        </div>
+        <div class="meta">
+            <span class="meta__title">Ahorro moto</span>
+            <div class="meta__informacion">
+                <div class="meta__row">
+                    <p class="meta__text">Monto a ahorrar:</p>
+                    <p class="meta__monto">$ 15.000.000</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text">Fecha estimada:</p>
+                    <p class="meta__meta-estimada">dd/mm/yyyy</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text meta__text--movimientos">Movimientos registrados:</p>
+                    <p class="meta__cont-movimientos">10</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text">Total ahorrado:</p>
+                    <p class="meta__total-ahorrado">$ 7.000.000</p>
+                </div>
+            </div>
+            <div class="meta__grafico">
+                <div class="meta__valores">
+                    <p class="meta__ahorrado">$ 0</p>
+                    <p class="meta__total">$ 15.000.000</p>
+                </div>
+                <progress class="meta__progreso" max="15000000" value="7000000"></progress>
+            </div>
+        </div>
+        <div class="meta">
+            <span class="meta__title">Ahorro moto</span>
+            <div class="meta__informacion">
+                <div class="meta__row">
+                    <p class="meta__text">Monto a ahorrar:</p>
+                    <p class="meta__monto">$ 15.000.000</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text">Fecha estimada:</p>
+                    <p class="meta__meta-estimada">dd/mm/yyyy</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text meta__text--movimientos">Movimientos registrados:</p>
+                    <p class="meta__cont-movimientos">10</p>
+                </div>
+                <div class="meta__row">
+                    <p class="meta__text">Total ahorrado:</p>
+                    <p class="meta__total-ahorrado">$ 7.000.000</p>
+                </div>
+            </div>
+            <div class="meta__grafico">
+                <div class="meta__valores">
+                    <p class="meta__ahorrado">$ 0</p>
+                    <p class="meta__total">$ 15.000.000</p>
+                </div>
+                <progress class="meta__progreso" max="15000000" value="7000000"></progress>
+            </div>
+        </div>
+    </div>
+
+  </main>
+
+  <script type="module" src="inicio.js"></script>
+</body>
+</html>

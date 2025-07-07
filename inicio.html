@@ -9,6 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body class="inicio">
   <header class="header">
@@ -52,17 +53,25 @@
     <hr class="sidebar__separator">
 
     <div class="sidebar-items">
-      <a href="#" class="sidebar-items__item">
-        <i class="ri-bank-line sidebar-items__icon"></i><span class="sidebar-items__texto">Inicio</span>
+      <a href="inicio.html" class="sidebar-items__item">
+        <i class="ri-home-3-line sidebar-items__icon"></i>
+        <span class="sidebar-items__texto">Inicio</span>
       </a>
-      <a href="#" class="sidebar-items__item">
-        <i class="ri-compass-3-line sidebar-items__icon"></i><span class="sidebar-items__texto">Metas</span>
+      <a href="metas.html" class="sidebar-items__item">
+        <i class="ri-bar-chart-box-line sidebar-items__icon"></i>
+        <span class="sidebar-items__texto">Metas</span>
       </a>
-      <a href="#" class="sidebar-items__item">
-        <i class="ri-calendar-event-line sidebar-items__icon"></i><span class="sidebar-items__texto">Calendario</span>
+      <a href="calendario.html" class="sidebar-items__item">
+        <i class="ri-calendar-line sidebar-items__icon"></i>
+        <span class="sidebar-items__texto">Calendario</span>
       </a>
-      <a href="#" class="sidebar-items__item">
-        <i class="ri-money-dollar-box-line sidebar-items__icon"></i><span class="sidebar-items__texto">Operaciones</span>
+      <a href="operaciones.html" class="sidebar-items__item">
+        <i class="ri-exchange-dollar-line sidebar-items__icon"></i>
+        <span class="sidebar-items__texto">Operaciones</span>
+      </a>
+      <a href="historial.html" class="sidebar-items__item">
+        <i class="ri-time-line sidebar-items__icon"></i>
+        <span class="sidebar-items__texto">Historial</span>
       </a>
     </div>
   </aside>
@@ -70,7 +79,9 @@
 
   <main class="content">
 
-    
+    <button class="nuevo"> 
+        <i class="ri-add-line nuevo__icono"></i>
+    </button>
 
     <div class="container-informacion">
 
@@ -130,140 +141,139 @@
       <span class="switch-filtro__slider"></span>
     </div>
 
-    <div class="container-movimientos">
+    <div class="tile-container">
 
-      <dialog class="modal">
-        <div class="modal__contenido">
-          <div class="modal__container-title">
-            <h2 class="modal__titulo">Movimiento</h2>
-            <div class="modal__salir">
-              <i class="ri-close-fill modal__salir-icono"></i>
-            </div>
+      <div class="tile categoria">
+        <div class="tile__info">
+          <div class="tile__icon-box">
+            <i class="ri-briefcase-line tile__icon"></i>
           </div>
-          <div class="modal__detalles">
-            <h3 class="modal__detalles__title">Detalles:</h3>
-            <form class="info-movimiento">
-              <div class="info-movimiento__container-campos">
-                <div class="info-movimiento__control">
-                  <label class="info-movimiento__nombre-campo">Tipo de movimiento:</label>
-                  <select disabled class="info-movimiento__campo info-movimiento__campo--select">
-                    <option>Seleccione...</option>
-                    <option>Ingreso</option>
-                    <option>Gasto</option>
-                    <option>Cuota de meta</option>
-                  </select>
-                </div>
-                <div class="info-movimiento__control">
-                  <label class="info-movimiento__nombre-campo">Categoría:</label>
-                  <select disabled class="info-movimiento__campo info-movimiento__campo--select">
-                    <option>Seleccione...</option>
-                    <option>Comida</option>
-                    <option>Transporte</option>
-                    <option>Moda</option>
-                  </select>
-                </div>
-              </div>
-              <div class="info-movimiento__container-campos">
-                <div class="info-movimiento__control">
-                  <label class="info-movimiento__nombre-campo">Monto:</label>
-                  <input type="text" disabled class="info-movimiento__campo info-movimiento__campo--texto">
-                </div>
-                <div class="info-movimiento__control">
-                  <label class="info-movimiento__nombre-campo">Fecha:</label>
-                  <input type="date" class="info-movimiento__campo info-movimiento__campo--fecha" disabled>
-                </div>
-              </div>
-              <div class="info-movimiento__container-campos">
-                <div class="info-movimiento__control">
-                  <label class="info-movimiento__nombre-campo">Descripción:</label>
-                  <textarea rows="3" disabled class="info-movimiento__campo info-movimiento__campo--textarea"></textarea>
-                </div>
-              </div>
-              <div class="info-movimiento__botones">
-                <button class="boton boton--editar">Editar</button>
-                <button class="boton boton--eliminar">Eliminar</button>
-              </div>
-            </form>
+          <div class="tile__content">
+            <span class="tile__title">Salario</span>
+            <span class="tile__description">2 movimientos</span>
           </div>
-          <!-- <button id="cerrarModal">Cerrar</button> -->
         </div>
-      </dialog>
+        <span class="tile__monto">$ 3.200.000</span>
+      </div>
 
+      <div class="tile categoria">
+        <div class="tile__info">
+          <div class="tile__icon-box">
+            <i class="ri-line-chart-line tile__icon"></i>
+          </div>
+          <div class="tile__content">
+            <span class="tile__title">Inversiones</span>
+            <span class="tile__description">4 movimientos</span>
+          </div>
+        </div>
+        <span class="tile__monto">$ 850.000</span>
+      </div>
 
-      <div class="movimiento">
-        <div class="movimiento__informacion">
-          <div class="movimiento__categoria">
-            <i class="ri-restaurant-line movimiento__icono"></i>
+      <div class="tile categoria">
+        <div class="tile__info">
+          <div class="tile__icon-box">
+            <i class="ri-shopping-bag-3-line tile__icon"></i>
           </div>
-          <div class="movimiento__contenido">
-            <span class="movimiento__tittle">Comida</span>
-            <span class="movimiento__descripcion">Compré comida para la casa</span>
-          </div>
-        </div>
-        <span class="movimiento__monto">$ 250.000</span>
-      </div>
-      <div class="movimiento">
-        <div class="movimiento__informacion">
-          <div class="movimiento__categoria">
-            <i class="ri-restaurant-line movimiento__icono"></i>
-          </div>
-          <div class="movimiento__contenido">
-            <span class="movimiento__tittle">Comida</span>
-            <span class="movimiento__descripcion">Compré comida para la casa</span>
+          <div class="tile__content">
+            <span class="tile__title">Ventas</span>
+            <span class="tile__description">3 movimientos</span>
           </div>
         </div>
-        <span class="movimiento__monto">$ 250.000</span>
+        <span class="tile__monto">$ 1.150.000</span>
       </div>
-      <div class="movimiento">
-        <div class="movimiento__informacion">
-          <div class="movimiento__categoria">
-            <i class="ri-restaurant-line movimiento__icono"></i>
+
+      <div class="tile categoria">
+        <div class="tile__info">
+          <div class="tile__icon-box">
+            <i class="ri-bank-card-line tile__icon"></i>
           </div>
-          <div class="movimiento__contenido">
-            <span class="movimiento__tittle">Comida</span>
-            <span class="movimiento__descripcion">Compré comida para la casa</span>
+          <div class="tile__content">
+            <span class="tile__title">Transferencias</span>
+            <span class="tile__description">5 movimientos</span>
           </div>
         </div>
-        <span class="movimiento__monto">$ 250.000</span>
+        <span class="tile__monto">$ 600.000</span>
       </div>
-      <div class="movimiento">
-        <div class="movimiento__informacion">
-          <div class="movimiento__categoria">
-            <i class="ri-restaurant-line movimiento__icono"></i>
+
+      <div class="tile categoria">
+        <div class="tile__info">
+          <div class="tile__icon-box">
+            <i class="ri-gift-line tile__icon"></i>
           </div>
-          <div class="movimiento__contenido">
-            <span class="movimiento__tittle">Comida</span>
-            <span class="movimiento__descripcion">Compré comida para la casa</span>
+          <div class="tile__content">
+            <span class="tile__title">Regalos</span>
+            <span class="tile__description">1 movimiento</span>
           </div>
         </div>
-        <span class="movimiento__monto">$ 250.000</span>
+        <span class="tile__monto">$ 200.000</span>
       </div>
-      <div class="movimiento">
-        <div class="movimiento__informacion">
-          <div class="movimiento__categoria">
-            <i class="ri-restaurant-line movimiento__icono"></i>
+
+      <div class="tile categoria">
+        <div class="tile__info">
+          <div class="tile__icon-box">
+            <i class="ri-currency-line tile__icon"></i>
           </div>
-          <div class="movimiento__contenido">
-            <span class="movimiento__tittle">Comida</span>
-            <span class="movimiento__descripcion">Compré comida para la casa</span>
+          <div class="tile__content">
+            <span class="tile__title">Dividendos</span>
+            <span class="tile__description">2 movimientos</span>
           </div>
         </div>
-        <span class="movimiento__monto">$ 250.000</span>
+        <span class="tile__monto">$ 430.000</span>
       </div>
-      <div class="movimiento">
-        <div class="movimiento__informacion">
-          <div class="movimiento__categoria">
-            <i class="ri-restaurant-line movimiento__icono"></i>
+
+      <div class="tile categoria">
+        <div class="tile__info">
+          <div class="tile__icon-box">
+            <i class="ri-building-line tile__icon"></i>
           </div>
-          <div class="movimiento__contenido">
-            <span class="movimiento__tittle">Comida</span>
-            <span class="movimiento__descripcion">Compré comida para la casa</span>
+          <div class="tile__content">
+            <span class="tile__title">Renta</span>
+            <span class="tile__description">1 movimiento</span>
           </div>
         </div>
-        <span class="movimiento__monto">$ 250.000</span>
+        <span class="tile__monto">$ 1.000.000</span>
       </div>
+
+      <div class="tile categoria">
+        <div class="tile__info">
+          <div class="tile__icon-box">
+            <i class="ri-cash-line tile__icon"></i>
+          </div>
+          <div class="tile__content">
+            <span class="tile__title">Reembolsos</span>
+            <span class="tile__description">2 movimientos</span>
+          </div>
+        </div>
+        <span class="tile__monto">$ 125.000</span>
+      </div>
+
+      <div class="tile categoria">
+        <div class="tile__info">
+          <div class="tile__icon-box">
+            <i class="ri-hand-coin-line tile__icon"></i>
+          </div>
+          <div class="tile__content">
+            <span class="tile__title">Préstamos recibidos</span>
+            <span class="tile__description">1 movimiento</span>
+          </div>
+        </div>
+        <span class="tile__monto">$ 500.000</span>
+      </div>
+
+      <div class="tile categoria">
+        <div class="tile__info">
+          <div class="tile__icon-box">
+            <i class="ri-award-line tile__icon"></i>
+          </div>
+          <div class="tile__content">
+            <span class="tile__title">Bonificaciones</span>
+            <span class="tile__description">1 movimiento</span>
+          </div>
+        </div>
+        <span class="tile__monto">$ 700.000</span>
+      </div>
+
     </div>
-
   </main>
   <script type="module" src="inicio.js"></script>
 </body>

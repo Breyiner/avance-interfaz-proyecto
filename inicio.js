@@ -12,13 +12,65 @@ if (usuario) {
   nombreMenu.textContent = `${usuario.nombre} ${usuario.apellido}`;
 }
 
+const obtenerContenido = async (ruta) => {
+  let data = await fetch(ruta);
+  return await data.text();
+}
 
-movimiento.addEventListener("click", (e) => {
-  document.querySelector('.modal').showModal();
-  modal.classList.add("mostrar"); // Mostrar modal
+const showModalMovimientos = async () => {
+  Swal.fire({
+    html: await obtenerContenido('./modales/modalMovimientos.html'),
+    showConfirmButton: false,
+    showCloseButton: false, // Desactiva la X original
+    customClass: {
+      popup: 'mi-modal mi-modal--movimientos padding-none',
+      htmlContainer: 'padding-none'
+    },
+    didOpen: () => {
+      const cerrar = document.querySelector('.modal__salir');
+      cerrar.addEventListener('click', () => Swal.close());
+
+      document.addEventListener('click', (e) => {
+        if (e.target.closest('.movimiento')) {
+          Swal.close();
+  
+          setTimeout(async () => {
+            await modalDetallesMovimientos();
+          }, 200); 
+        }
+      });
+    }
+  });
+}
+
+const modalDetallesMovimientos = async () =>{
+  Swal.fire({
+    html: await obtenerContenido('./modales/modalDetallesMovimientos.html'),
+    showConfirmButton: false,
+    showCloseButton: false, // Desactiva la X original
+    customClass: {
+      popup: 'mi-modal padding-none',
+      htmlContainer: 'padding-none'
+    },
+    didOpen: async () => {
+      const cerrar = document.querySelector('.modal__salir');
+      cerrar.addEventListener('click', () => {
+        Swal.close()
+
+        
+        setTimeout(async () => {
+          await showModalMovimientos();
+        }, 200); 
+      });
+    }
+  });
+}
+
+document.addEventListener('click', (e) => {
+  
+  if(e.target.closest('.categoria')) showModalMovimientos();
 });
 
-cerrar.addEventListener('click', () => {
-  document.querySelector('.modal').close();
-  modal.classList.remove("mostrar"); // Ocultar modal
-});
+// movimiento.addEventListener("click", async () => {
+//   showModalMovimientos();
+// });
