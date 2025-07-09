@@ -490,12 +490,23 @@ body {
 .container {
   width: 100%;
   padding: 30px;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
 /* inicio*/
+
+.titulo-contenido__titulo {
+  color: #197364;
+}
+
+.titulo-contenido__texto-ayuda {
+  color: rgb(120, 120, 120);
+  font-weight: 600;
+}
+
 .switch-filtro {
   display: flex;
   align-items: center;
