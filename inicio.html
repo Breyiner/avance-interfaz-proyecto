@@ -14,7 +14,7 @@
 <body class="layout">
   <header class="header">
     <div class="logo-container logo-container--inicio">
-      <img src="./img/logo-proyecto-color.ico" alt="imagen logo" class="logo-container__logo logo-container__logo--inicio">
+      <img src="./img/logo-proyecto-color.png" alt="imagen logo" class="logo-container__logo logo-container__logo--inicio">
       <p class="logo-container__tittle logo-container__tittle--inicio">whealthy wellness</p>
     </div>
     <!-- <div class="container-tittle">
@@ -77,11 +77,37 @@
         <i class="ri-add-line nuevo__icono"></i>
     </button>
 
-    <div class="container-informacion">
+    <div class="container">
 
       <div class="informacion">
 
-        <div class="informacion-fecha">
+        <div class="container-balance">
+          <!-- <div class="fecha-balance">
+            <p class="fecha-balance--titulo">Fecha:</p>
+            <p class="fecha-balance__texto">09/07/2025</p>
+          </div> -->
+          <div class="balance">
+            <h2 class="balance__titulo">Balance</h2>
+            <span class="balance__monto">$ 1.000.000</span>
+          </div>
+        </div>
+
+        <div class="container-movimientos">
+          <div class="movimiento-card movimiento--ingresos">
+            <h2 class="movimiento__titulo">Ingresos</h3>
+            <span class="movimiento__monto">+ $ 1.500.000</span>
+          </div>
+          <div class="movimiento-card movimiento--gastos">
+            <h2 class="movimiento__titulo">Gastos</h3>
+            <span class="movimiento__monto">- $ 300.000</span>
+          </div>
+          <div class="movimiento-card movimiento--metas">
+            <h2 class="movimiento__titulo">Metas</h3>
+            <span class="movimiento__monto">- $ 200.000</span>
+          </div>
+        </div>
+
+        <!-- <div class="informacion-fecha">
 
           <div class="informacion-fecha__calendario">
             <i class='fa-regular fa-calendar informacion-fecha__icono'></i>
@@ -113,161 +139,157 @@
               <span class="informacion-balance__monto">- $ 200.000</span>
             </div>
           </div>
+        </div> -->
+      </div>
+      <div class="switch-filtro">
+        
+        <label class="switch-filtro__name switch-filtro__name--ingresos" for="radio-switch-ingresos">Ingresos</label>
+        <input type="radio" name="radio-switch" id="radio-switch-ingresos" class="switch-filtro__radio switch-filtro__radio--ingresos">
+        
+        <label class="switch-filtro__name switch-filtro__name--gastos" for="radio-switch-gastos">Gastos</label>
+        <input type="radio" name="radio-switch" id="radio-switch-gastos" class="switch-filtro__radio switch-filtro__radio--gastos">
+        
+        <label class="switch-filtro__name switch-filtro__name--metas" for="radio-switch-metas">Metas</label>
+        <input type="radio" name="radio-switch" id="radio-switch-metas" class="switch-filtro__radio switch-filtro__radio--metas">
+        
+        <span class="switch-filtro__slider"></span>
+      </div>
+  
+      <div class="tile-container">
+  
+        <div class="tile categoria">
+          <div class="tile__info">
+            <div class="tile__icon-box">
+              <i class="ri-briefcase-line tile__icon"></i>
+            </div>
+            <div class="tile__content">
+              <span class="tile__title">Salario</span>
+              <span class="tile__description">2 movimientos</span>
+            </div>
+          </div>
+          <span class="tile__monto">$ 3.200.000</span>
         </div>
-
-        <div class="informacion-mensaje">
-          <span class="informacion-mensaje__mensaje">Tu balance es positivo. ¡Bien hecho!</span>
+  
+        <div class="tile categoria">
+          <div class="tile__info">
+            <div class="tile__icon-box">
+              <i class="ri-line-chart-line tile__icon"></i>
+            </div>
+            <div class="tile__content">
+              <span class="tile__title">Inversiones</span>
+              <span class="tile__description">4 movimientos</span>
+            </div>
+          </div>
+          <span class="tile__monto">$ 850.000</span>
         </div>
+  
+        <div class="tile categoria">
+          <div class="tile__info">
+            <div class="tile__icon-box">
+              <i class="ri-shopping-bag-3-line tile__icon"></i>
+            </div>
+            <div class="tile__content">
+              <span class="tile__title">Ventas</span>
+              <span class="tile__description">3 movimientos</span>
+            </div>
+          </div>
+          <span class="tile__monto">$ 1.150.000</span>
+        </div>
+  
+        <div class="tile categoria">
+          <div class="tile__info">
+            <div class="tile__icon-box">
+              <i class="ri-bank-card-line tile__icon"></i>
+            </div>
+            <div class="tile__content">
+              <span class="tile__title">Transferencias</span>
+              <span class="tile__description">5 movimientos</span>
+            </div>
+          </div>
+          <span class="tile__monto">$ 600.000</span>
+        </div>
+  
+        <div class="tile categoria">
+          <div class="tile__info">
+            <div class="tile__icon-box">
+              <i class="ri-gift-line tile__icon"></i>
+            </div>
+            <div class="tile__content">
+              <span class="tile__title">Regalos</span>
+              <span class="tile__description">1 movimiento</span>
+            </div>
+          </div>
+          <span class="tile__monto">$ 200.000</span>
+        </div>
+  
+        <div class="tile categoria">
+          <div class="tile__info">
+            <div class="tile__icon-box">
+              <i class="ri-currency-line tile__icon"></i>
+            </div>
+            <div class="tile__content">
+              <span class="tile__title">Dividendos</span>
+              <span class="tile__description">2 movimientos</span>
+            </div>
+          </div>
+          <span class="tile__monto">$ 430.000</span>
+        </div>
+  
+        <div class="tile categoria">
+          <div class="tile__info">
+            <div class="tile__icon-box">
+              <i class="ri-building-line tile__icon"></i>
+            </div>
+            <div class="tile__content">
+              <span class="tile__title">Renta</span>
+              <span class="tile__description">1 movimiento</span>
+            </div>
+          </div>
+          <span class="tile__monto">$ 1.000.000</span>
+        </div>
+  
+        <div class="tile categoria">
+          <div class="tile__info">
+            <div class="tile__icon-box">
+              <i class="ri-cash-line tile__icon"></i>
+            </div>
+            <div class="tile__content">
+              <span class="tile__title">Reembolsos</span>
+              <span class="tile__description">2 movimientos</span>
+            </div>
+          </div>
+          <span class="tile__monto">$ 125.000</span>
+        </div>
+  
+        <div class="tile categoria">
+          <div class="tile__info">
+            <div class="tile__icon-box">
+              <i class="ri-hand-coin-line tile__icon"></i>
+            </div>
+            <div class="tile__content">
+              <span class="tile__title">Préstamos recibidos</span>
+              <span class="tile__description">1 movimiento</span>
+            </div>
+          </div>
+          <span class="tile__monto">$ 500.000</span>
+        </div>
+  
+        <div class="tile categoria">
+          <div class="tile__info">
+            <div class="tile__icon-box">
+              <i class="ri-award-line tile__icon"></i>
+            </div>
+            <div class="tile__content">
+              <span class="tile__title">Bonificaciones</span>
+              <span class="tile__description">1 movimiento</span>
+            </div>
+          </div>
+          <span class="tile__monto">$ 700.000</span>
+        </div>
+  
       </div>
     </div>
     
-    <div class="switch-filtro">
-      
-      <label class="switch-filtro__name switch-filtro__name--ingresos" for="radio-switch-ingresos">Ingresos</label>
-      <input type="radio" name="radio-switch" id="radio-switch-ingresos" class="switch-filtro__radio switch-filtro__radio--ingresos">
-      
-      <label class="switch-filtro__name switch-filtro__name--gastos" for="radio-switch-gastos">Gastos</label>
-      <input type="radio" name="radio-switch" id="radio-switch-gastos" class="switch-filtro__radio switch-filtro__radio--gastos">
-      
-      <label class="switch-filtro__name switch-filtro__name--metas" for="radio-switch-metas">Metas</label>
-      <input type="radio" name="radio-switch" id="radio-switch-metas" class="switch-filtro__radio switch-filtro__radio--metas">
-      
-      <span class="switch-filtro__slider"></span>
-    </div>
-
-    <div class="tile-container">
-
-      <div class="tile categoria">
-        <div class="tile__info">
-          <div class="tile__icon-box">
-            <i class="ri-briefcase-line tile__icon"></i>
-          </div>
-          <div class="tile__content">
-            <span class="tile__title">Salario</span>
-            <span class="tile__description">2 movimientos</span>
-          </div>
-        </div>
-        <span class="tile__monto">$ 3.200.000</span>
-      </div>
-
-      <div class="tile categoria">
-        <div class="tile__info">
-          <div class="tile__icon-box">
-            <i class="ri-line-chart-line tile__icon"></i>
-          </div>
-          <div class="tile__content">
-            <span class="tile__title">Inversiones</span>
-            <span class="tile__description">4 movimientos</span>
-          </div>
-        </div>
-        <span class="tile__monto">$ 850.000</span>
-      </div>
-
-      <div class="tile categoria">
-        <div class="tile__info">
-          <div class="tile__icon-box">
-            <i class="ri-shopping-bag-3-line tile__icon"></i>
-          </div>
-          <div class="tile__content">
-            <span class="tile__title">Ventas</span>
-            <span class="tile__description">3 movimientos</span>
-          </div>
-        </div>
-        <span class="tile__monto">$ 1.150.000</span>
-      </div>
-
-      <div class="tile categoria">
-        <div class="tile__info">
-          <div class="tile__icon-box">
-            <i class="ri-bank-card-line tile__icon"></i>
-          </div>
-          <div class="tile__content">
-            <span class="tile__title">Transferencias</span>
-            <span class="tile__description">5 movimientos</span>
-          </div>
-        </div>
-        <span class="tile__monto">$ 600.000</span>
-      </div>
-
-      <div class="tile categoria">
-        <div class="tile__info">
-          <div class="tile__icon-box">
-            <i class="ri-gift-line tile__icon"></i>
-          </div>
-          <div class="tile__content">
-            <span class="tile__title">Regalos</span>
-            <span class="tile__description">1 movimiento</span>
-          </div>
-        </div>
-        <span class="tile__monto">$ 200.000</span>
-      </div>
-
-      <div class="tile categoria">
-        <div class="tile__info">
-          <div class="tile__icon-box">
-            <i class="ri-currency-line tile__icon"></i>
-          </div>
-          <div class="tile__content">
-            <span class="tile__title">Dividendos</span>
-            <span class="tile__description">2 movimientos</span>
-          </div>
-        </div>
-        <span class="tile__monto">$ 430.000</span>
-      </div>
-
-      <div class="tile categoria">
-        <div class="tile__info">
-          <div class="tile__icon-box">
-            <i class="ri-building-line tile__icon"></i>
-          </div>
-          <div class="tile__content">
-            <span class="tile__title">Renta</span>
-            <span class="tile__description">1 movimiento</span>
-          </div>
-        </div>
-        <span class="tile__monto">$ 1.000.000</span>
-      </div>
-
-      <div class="tile categoria">
-        <div class="tile__info">
-          <div class="tile__icon-box">
-            <i class="ri-cash-line tile__icon"></i>
-          </div>
-          <div class="tile__content">
-            <span class="tile__title">Reembolsos</span>
-            <span class="tile__description">2 movimientos</span>
-          </div>
-        </div>
-        <span class="tile__monto">$ 125.000</span>
-      </div>
-
-      <div class="tile categoria">
-        <div class="tile__info">
-          <div class="tile__icon-box">
-            <i class="ri-hand-coin-line tile__icon"></i>
-          </div>
-          <div class="tile__content">
-            <span class="tile__title">Préstamos recibidos</span>
-            <span class="tile__description">1 movimiento</span>
-          </div>
-        </div>
-        <span class="tile__monto">$ 500.000</span>
-      </div>
-
-      <div class="tile categoria">
-        <div class="tile__info">
-          <div class="tile__icon-box">
-            <i class="ri-award-line tile__icon"></i>
-          </div>
-          <div class="tile__content">
-            <span class="tile__title">Bonificaciones</span>
-            <span class="tile__description">1 movimiento</span>
-          </div>
-        </div>
-        <span class="tile__monto">$ 700.000</span>
-      </div>
-
-    </div>
   </main>
   <script type="module" src="inicio.js"></script>
 </body>
