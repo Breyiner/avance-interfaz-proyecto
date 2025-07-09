@@ -326,7 +326,7 @@ body {
 
 .sidebar-items__item--inicio {
   color: #197364;
-  border-right: 4px solid #197364;
+  border-left: 4px solid #197364;
 }
 
 .sidebar-items__texto {
