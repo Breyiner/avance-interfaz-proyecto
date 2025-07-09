@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.18/index.global.min.js"></script>
 </head>
 <body class="layout">
   <header class="header">
@@ -70,16 +71,46 @@
     </div>
   </aside>
 
-  <main class="content">
+  <main class="content content--calendario">
 
     <div class="container">
       <div class="titulo-contenido">
         <h1 class="titulo-contenido__titulo">Calendario</h1>
         <p class="titulo-contenido__texto-ayuda">Apartado para visualizar el calendario de movimientos.</p>
       </div>
+
+      <div class="container-calendario">
+        <div class="calendario" id="calendario"></div>
+        <div class="informacion informacion--calendario">
+
+          <!-- <div class="guia-colores">
+            
+          </div> -->
+        
+          <div class="container-movimientos container-movimientos--calendario">
+            
+            <div class="movimiento-card movimiento--ingresos movimiento-card--calendario">
+              <h2 class="movimiento__titulo">Ingresos</h3>
+              <span class="movimiento__monto movimiento__monto--historial">+ $ 1.500.000</span>
+            </div>
+            <div class="movimiento-card movimiento--gastos movimiento-card--calendario">
+              <h2 class="movimiento__titulo">Gastos</h3>
+              <span class="movimiento__monto movimiento__monto--historial">- $ 300.000</span>
+            </div>
+            <div class="movimiento-card movimiento--metas movimiento-card--calendario">
+              <h2 class="movimiento__titulo">Metas</h3>
+              <span class="movimiento__monto movimiento__monto--historial">- $ 200.000</span>
+            </div>
+            <div class="movimiento-card balance movimiento-card--calendario">
+              <h2 class="balance__titulo">Balance</h2>
+              <span class="balance__monto balance__monto--historial">$ 1.000.000</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
   </main>
-  <script type="module" src="inicio.js"></script>
+  <script type="module" src="calendario.js"></script>
 </body>
 </html>
