@@ -612,11 +612,11 @@ input[type="radio"]:checked.switch-filtro__radio--metas ~ .switch-filtro__slider
 }
 
 .movimiento--ingresos {
-  background: linear-gradient(to right, #ffffff, #66bb6a);
+  background: linear-gradient(to right, #ffffff, #6aed71);
 }
 
 .movimiento--gastos {
-  background: linear-gradient(to right, #ffffff, #ef5350);
+  background: linear-gradient(to right, #ffffff, #f14d4a);
 }
 
 .movimiento--metas {
