@@ -6,48 +6,48 @@
         </div>
     </div>
     <div class="modal__detalles">
-        <h3 class="modal__detalles__title">Detalles:</h3>
         <form class="info-movimiento">
-        <div class="info-movimiento__container-campos">
-            <div class="info-movimiento__control">
-            <label class="info-movimiento__nombre-campo">Tipo de movimiento:</label>
-            <select disabled class="info-movimiento__campo info-movimiento__campo--select">
-                <option>Seleccione...</option>
-                <option>Ingreso</option>
-                <option>Gasto</option>
-                <option>Cuota de meta</option>
-            </select>
+            <h3 class="modal__detalles__title">Detalles:</h3>
+            <div class="info-movimiento__container-campos">
+                <div class="info-movimiento__control">
+                <label class="info-movimiento__nombre-campo">Tipo de movimiento:</label>
+                <select  class="info-movimiento__campo info-movimiento__campo--select">
+                    <option>Seleccione...</option>
+                    <option>Ingreso</option>
+                    <option>Gasto</option>
+                    <option>Cuota de meta</option>
+                </select>
+                </div>
+                <div class="info-movimiento__control">
+                <label class="info-movimiento__nombre-campo">Categoría:</label>
+                <select  class="info-movimiento__campo info-movimiento__campo--select">
+                    <option>Seleccione...</option>
+                    <option>Comida</option>
+                    <option>Transporte</option>
+                    <option>Moda</option>
+                </select>
+                </div>
             </div>
-            <div class="info-movimiento__control">
-            <label class="info-movimiento__nombre-campo">Categoría:</label>
-            <select disabled class="info-movimiento__campo info-movimiento__campo--select">
-                <option>Seleccione...</option>
-                <option>Comida</option>
-                <option>Transporte</option>
-                <option>Moda</option>
-            </select>
+            <div class="info-movimiento__container-campos">
+                <div class="info-movimiento__control">
+                <label class="info-movimiento__nombre-campo">Monto:</label>
+                <input type="text"  class="info-movimiento__campo info-movimiento__campo--texto">
+                </div>
+                <div class="info-movimiento__control">
+                <label class="info-movimiento__nombre-campo">Fecha:</label>
+                <input type="date" class="info-movimiento__campo info-movimiento__campo--fecha" >
+                </div>
             </div>
-        </div>
-        <div class="info-movimiento__container-campos">
-            <div class="info-movimiento__control">
-            <label class="info-movimiento__nombre-campo">Monto:</label>
-            <input type="text" disabled class="info-movimiento__campo info-movimiento__campo--texto">
+            <div class="info-movimiento__container-campos">
+                <div class="info-movimiento__control">
+                <label class="info-movimiento__nombre-campo">Descripción:</label>
+                <textarea rows="4"  class="info-movimiento__campo info-movimiento__campo--textarea"></textarea>
+                </div>
             </div>
-            <div class="info-movimiento__control">
-            <label class="info-movimiento__nombre-campo">Fecha:</label>
-            <input type="date" class="info-movimiento__campo info-movimiento__campo--fecha" disabled>
+            <div class="info-movimiento__botones">
+                <button class="boton boton--editar">Editar</button>
+                <button class="boton boton--eliminar">Eliminar</button>
             </div>
-        </div>
-        <div class="info-movimiento__container-campos">
-            <div class="info-movimiento__control">
-            <label class="info-movimiento__nombre-campo">Descripción:</label>
-            <textarea rows="3" disabled class="info-movimiento__campo info-movimiento__campo--textarea"></textarea>
-            </div>
-        </div>
-        <div class="info-movimiento__botones">
-            <button class="boton boton--editar">Editar</button>
-            <button class="boton boton--eliminar">Eliminar</button>
-        </div>
         </form>
     </div>
 </div>
